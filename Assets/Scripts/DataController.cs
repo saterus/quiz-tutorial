@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ public class DataController : MonoBehaviour
 	void Start()
 	{
 		DontDestroyOnLoad(gameObject);
+		allRoundData = QuizData.LoadFromFile().allRoundData;
 		LoadPlayerProgress();
 
 		SceneManager.LoadScene("MenuScreen");

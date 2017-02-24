@@ -131,7 +131,7 @@ MonoBehaviour:
         isCorrect: 0
     - questionText: Does this *really* work?
       answers:
-      - answerText: Yes
+      - answerText: How?
         isCorrect: 1
       - answerText: It's truly hard to say
         isCorrect: 0
