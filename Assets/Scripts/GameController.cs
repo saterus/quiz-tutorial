@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
 	public Text questionDisplayText;
 	public Text scoreDisplayText;
 	public Text timeRemainingDisplayText;
+	public Text highScoreDisplay;
 	public GameObject questionPanel;
 	public GameObject roundOverPanel;
 
@@ -83,6 +84,8 @@ public class GameController : MonoBehaviour
 
 	public void EndRound()
 	{
+		dataController.SubmitNewPlayerScore(playerScore);
+		highScoreDisplay.text = "High Score: " + dataController.GetHighestPlayerScore().ToString();
 		isRoundActive = false;
 		roundOverPanel.SetActive(true);
 	}
